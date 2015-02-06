@@ -18,7 +18,14 @@ app.use(logger());
 app.use(express.static(__dirname + '/public'));
 
 app.get('/api', function(req, res){
-   res.send({title: 'The index page!'});
+	var data = {
+		title : 'The index page!',
+		dog : {
+			food:'bone',
+			color:'white'
+		}
+	}
+   res.send(data);
 });
 
 app.listen(4000);
