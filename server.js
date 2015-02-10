@@ -16,15 +16,53 @@ app.use(logger());
 app.use(express.static(__dirname + '/public'));
 
 
-
+var contentPath = 'http://127.0.0.1:3000';
 app.get('/', function(req, res){
-	var contentPath = 'http://127.0.0.1:3000';
+	
 	var option = {
-		contentPath : contentPath
+		contentPath : contentPath,
+		goodsList :[
+			{
+				goodsCode : '1000',
+				goodsName : '商品1 goods1',
+				goodsImg : 'imgs/1.jpg'
+			},
+			{
+				goodsCode : '1001',
+				goodsName : '商品2 goods2',
+				goodsImg : 'imgs/2.jpg'
+			}
+		]
 	}
 	res.render('index', option);
-  	//res.render('layout', { title: 'The index page!' })
 });
+
+app.get('/goodsInfoShow/:goodsCode', function(req, res){
+	var goodsCode = req.params.goodsCode;
+	console.info('-------------------------------------------------')
+	console.info(goodsCode)
+	var goodsCode1 = req.query.goodsCode;
+	console.info(goodsCode1)
+	var data = [
+			{
+				goodsCode : '1000',
+				goodsName : '商品1 goods1',
+				goodsImg : 'imgs/1.jpg'
+			},
+			{
+				goodsCode : '1001',
+				goodsName : '商品2 goods2',
+				goodsImg : 'imgs/2.jpg'
+			}
+	];
+	var option = {
+		contentPath : contentPath,
+		goodsName : '商品1'
+	}
+	res.render('goodsInfoShow', option);
+});
+
+
 
 app.get('/api', function(req, res0){
   	http.get("http://127.0.0.1:4000/api", function(res,data) {

@@ -1,3 +1,27 @@
 
 @import "app/header";
 
+.body-container{
+	width:100%;
+	background:#ccc;
+	padding-bottom:10px;
+}
+.goods-list{
+	width:300px;
+	margin:10px auto;
+	height:130px;
+	border:1px solid #fff;
+	.title{
+		float: left;
+		width: 100%;
+		height: 30px;
+		padding: 5px 40px;
+		background:#222;
+		color: #fff;
+	}
+	.img{
+		float: left;
+		width: 100%;
+		height: 98px;
+	}
+}

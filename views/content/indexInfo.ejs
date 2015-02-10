@@ -1,0 +1,12 @@
+<h2>这里是首页的内容区</h2>
+
+<% goodsList.forEach(function(e){ %>
+    <div class="goods-list">
+		<div class="title"><%=e.goodsName%></div>
+		<a href="<%= contentPath %>/goodsInfoShow/<%=e.goodsCode%>" target="_blank">
+			<img src="<%= contentPath %>/<%=e.goodsImg%>" class="img">
+		</a>
+	</div>
+<% }); %>
+
+
