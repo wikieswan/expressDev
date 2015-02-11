@@ -1,0 +1,21 @@
+{
+  "name": "public",
+  "version": "0.0.0",
+  "homepage": "https://github.com/wikieswan/expressDev",
+  "authors": [
+    "wikies.wan <wikies.wan@vipshop.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "1.10",
+    "bootstrap": "~3.3.2",
+    "nprogress": "~0.1.6"
+  }
+}
