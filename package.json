@@ -1,17 +1,19 @@
 {
-  "name": "expressDev",
+  "name": "expressDemo",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "wikieswan",
+  "keywords": [],
+  "author": "",
   "license": "ISC",
-  "devDependencies": {
-    "ejs": "^2.2.3",
-    "express": "^4.11.1",
-    "morgan": "^1.5.1",
-    "supervisor": "^0.6.0"
+  "dependencies": {
+    "cookie-parser": "^1.4.3",
+    "express": "^4.16.2",
+    "http-proxy-middleware": "^0.17.4",
+    "lodash": "^4.17.5",
+    "node-rest-client": "^3.1.0"
   }
 }
